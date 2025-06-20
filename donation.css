@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9f9fb;
+  color: #333;
+}
+
+header {
+  background: #4a0e78;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main.donation-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.donation-intro h1 {
+  font-size: 2rem;
+  color: #4a0e78;
+}
+
+.donation-intro .goal {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #555;
+}
+
+.donation-form {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.donation-form label {
+  font-weight: 600;
+}
+
+.donation-form input,
+.donation-form select,
+.donation-form textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.donation-form button {
+  padding: 15px;
+  background-color: #4a0e78;
+  color: transparent;
+  -webkit-text-stroke: 1px darkgrey;
+  font-size: 1rem;
+  border: 3px;
+  border-radius: 20px;
+  cursor: pointer;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease all;
+  z-index: 1;
+  
+}
+.donation-form button:before {
+   
+
+}
+
+.donation-form button:hover, button:focus {
+    color: white;
+}
+
+  
+
+
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #eee;
+  margin-top: 40px;
+  font-size: 0.9rem;
+}
