@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Zinduka</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="survivor.css">
+</head>
+<body>
+    <header class="hero-slider">
+      <div class="overlay"></div>
+
+
+        <div class="header-content">
+        <div class="top-right">
+    <h1>Survivor stories</h1>
+  
+  </div>
+
+  <div class="container">
+    <div class="quote">
+      <blockquote>
+      "Your story could be the key that unlocks someone else's prison."
+      </blockquote>
+    </div>
+  </div>
+  </header>
+
+<h2 class="section-title"> MOMENTS THAT CHANGED US</h2>
+
+    <div class="stories-row">
+  <div class="story-card">
+    <h3>Anonymous</h3>
+    <p>
+      For years I struggled with depression in silence.
+      <span class="dots">...</span>
+      <span class="more-text">
+        Sharing my story was the first step to healing. You are not alone.
+      </span>
+    </p>
+    <a href="anonymous.html" class="read-more-btn">Read More</a>
+  </div>
+
+  <div class="story-card">
+    <h3>Maria K.</h3>
+    <p>
+      I never thought I'd recover after the trauma,
+      <span class="dots">...</span>
+      <span class="more-text">
+        but speaking up connected me to others who helped me grow stronger.
+      </span>
+    </p>
+    <a href="MariaK.html" class="read-more-btn">Read More</a>
+  </div>
+
+  <div class="story-card">
+    <h3>Jamila</h3>
+    <p>
+      I chose to exist loudly
+      <span class="dots">...</span>
+      <span class="more-text">
+        and speaking up connected me to others who helped me grow stronger.
+      </span>
+    </p>
+    <a href="jamila.html" class="read-more-btn">Read More</a>
+  </div>
+</div>
+
+
+    <div class="form-section">
+  <h2>Share Your Story <span>📝</span></h2>
+  <form>
+    <div class="form-group">
+      <input type="text" id="name" name="name" required />
+      <label for="name">Name (or type 'Anonymous')</label>
+    </div>
+
+    <div class="form-group">
+      <textarea id="story" name="story" required></textarea>
+      <label for="story">Your Story</label>
+    </div>
+
+    <div class="form-group">
+      <input type="text" id="signature" name="signature" required />
+      <label for="signature">Digital Signature (Type your full name)</label>
+    </div>
+
+    <div class="checkbox-group">
+      <input type="checkbox" id="consent" required />
+      <label for="consent">I consent to sharing my story publicly on this platform.</label>
+    </div>
+
+    <button type="submit" class="btn"> Submit My Story</button>
+  </form>
+</div>
+
+
+  <footer>
+    <p><strong>Disclaimer:</strong> The stories shared on this platform are personal experiences. They are shared voluntarily and do not replace professional advice. MentalCare reserves the right to edit or remove submissions for clarity, safety, or compliance with community guidelines.</p>
+  </footer>
+  <script>
+  const buttons = document.querySelectorAll(".read-more-btn");
+
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const card = btn.closest(".story-card");
+      const dots = card.querySelector(".dots");
+      const moreText = card.querySelector(".more-text");
+
+      if (moreText.style.display === "inline") {
+        moreText.style.display = "none";
+        dots.style.display = "inline";
+        btn.textContent = "Read More";
+      } else {
+        moreText.style.display = "inline";
+        dots.style.display = "none";
+        btn.textContent = "Read Less";
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

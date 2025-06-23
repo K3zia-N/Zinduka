@@ -1,0 +1,274 @@
+body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #eaf6fb;
+      margin: 0;
+      padding: 0;
+      color: #2b2b2b;
+    }
+    header {
+      background-color: #fafafa;
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+    
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 30px;
+    }
+    .quote {
+      position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 1.3rem;
+  font-style: italic;
+  background: rgba(0, 0, 50, 0.4);
+  padding: 10px 20px;
+  border-radius: 8px;
+  z-index: 3;
+  animation: fadeInQuote 3s ease forwards;
+    }
+    @keyframes fadeInQuote{
+      from { opacity: 0; transform: translateX(-50%) translateY(10px); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+    }
+    
+    
+    footer {
+      background-color: #2b2b2b;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      margin-top: 50px;
+      font-size: 0.9em;
+    }
+    .hero-slider {
+  position: relative;
+  height: 60vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-slider::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position:  top center;
+  animation: sliderBG 15s infinite;
+  z-index: 0;
+  transition: background-image 1s ease-in-out;
+  opacity: 1;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 45, 85, 0.4); /* blue overlay */
+  z-index: 1;
+}
+.header-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+}
+
+/* NEW: Top-right positioning for h1 & p */
+.top-right {
+  position: absolute;
+  top: -10px;
+  right: 500px;
+  text-align: right;
+  color: white;
+}
+
+.top-right h1 {
+  font-size: 45px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-bottom: 5px;
+}
+
+
+/* 🔄 Keyframes to transition background images */
+@keyframes sliderBG {
+  0%    { background-image: url('images/My\ story\ gives\ hope.png'); opacity: 1;}
+  33%   { background-image: url('images/Afro\ girl.jpg');opacity: 1; }
+  66%   { background-image: url('images/Your\ voice\ has\ power.png'); opacity: 0.3;}
+  100%  { background-image: url('images/de5b38cb-3185-4ebc-b05a-7db08941e2f7.jpg'); opacity: 1;}
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+
+.stories-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.story-card {
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  width: 310px;
+  height: 300px; /* Equal to width to make it square */
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s;
+}
+
+.story-card:hover {
+  transform: translateY(-5px);
+}
+
+.read-more-btn {
+  align-self: flex-start;
+  margin-top: 10px;
+  color: #ff008c;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.read-more-btn:hover {
+  text-decoration: underline;
+}
+
+.story-card h3 {
+  margin-top: 0;
+}
+
+.story-card p {
+  flex-grow: 1;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+.form-section {
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px;
+  background: linear-gradient(to bottom right, #ffffff, #f0f4ff);
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 123, 255, 0.1);
+  animation: fadeIn 1.2s ease;
+}
+
+.form-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+.form-section h2 span {
+  font-size: 1.5rem;
+  display: inline-block;
+  transform: rotate(-8deg);
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 16px 12px 16px 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.form-group textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.form-group label {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  color: #888;
+  font-size: 0.95rem;
+  pointer-events: none;
+  transition: all 0.2s ease-out;
+}
+
+.form-group input:focus + label,
+.form-group textarea:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group textarea:not(:placeholder-shown) + label {
+  top: -10px;
+  left: 10px;
+  background-color: #f0f4ff;
+  padding: 0 5px;
+  font-size: 0.8rem;
+  color: #007bff;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.95rem;
+  color: #555;
+  margin-top: 15px;
+}
+
+.checkbox-group input[type="checkbox"] {
+  transform: scale(1.2);
+  margin-top: 5px;
+}
+
+.btn {
+  display: inline-block;
+  width: 100%;
+  margin-top: 30px;
+  padding: 14px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(to right, #00c6ff, #007bff);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.2);
+}
+
+.btn:hover {
+  background: linear-gradient(to right, #007bff, #0056b3);
+  transform: scale(1.02);
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
