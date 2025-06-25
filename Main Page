@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="Stylesheet.css">
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <title>Zinduka</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav class="navbar">
+        <h1 class="logo">
+            END FEMICIDE
+        </h1>
+        <div class="nav-links">
+          <ul>
+            <li class="active"><a href="zinduka3.html">HOME</a></li>
+            <li><a href="report.html">REPORT</a></li>
+            <li><a href="Donation.html">DONATE</a></li>
+            <li><a href="survivor.html">SURVIVOR VOICE</a></li>
+            <li class="ctn"><a href="#">Contact Us</a></li>
+        </ul>
+        </div>
+      
+       
+
+        
+    </nav>
+    <header>
+       <div class="header_content">
+        <h2> RESPECT WOMEN</h2>
+        <div class="line"></div>
+        <h1>STOP THE VIOLENCE</h1>
+        <a href="#" class="ctn">Learn More</a>
+       </div> 
+    </header>
+    <!--mission and vision-->
+    <!--section class="mission-vision">
+        <div class="title">
+          <h1>MISSION AND VISION</h1>
+          <video autoplay loop muted plays-inline class="background-clip">
+            <source src="zinduka.mp4" type="video/mp4">
+          </video>
+            
+            <div class="line"></div>
+        </div>
+        <div class="row">
+            <div class="col">
+          
+                <div class="maincontainer">
+  <div class="thecard">
+    <div class="thefront-one">
+      <img src="womenn.png" alt="">
+      <h1>OUR MISSION</h1>
+    </div>
+      <div class="theback">
+        <h1>"Empowering individuals to end femicide and GBV through safe reporting, awareness and support"</h1></div>
+  </div>
+</div>
+  </div>
+
+    <div class="maincontainer">
+  <div class="thecard">
+    <div class="thefront-two">
+      <img src="image.png" alt="">
+      <h1>OUR VISION</h1>
+    </div>
+    <div class="theback">
+      <h1>"A Kenya free from femicide and gender-basedviolence, where every woman and girl, regardless of age and background, feels safe, empowered and heard!"</h1>
+    </div>
+  </div>
+</div>   
+            </div>
+        
+    
+    </section>
+
+<!--homepage section three-->
+
+   <section class="homepage-three">
+    <div class="heading">
+      <h1>SURVIVOR CORNER</h1>
+    </div>
+    <div class="container">
+      <div class="survivor-content">
+        <h2>SURVIVOR VOICE</h2>
+        -<h5>ALLOWING HEALING AND TRANSPARENCY</h5>
+        <p>Have a story to share? 
+          Welcome to the Survivor Corner to share it or get a glimpse of insightful stories of femicide and GBV survivors.
+          </p>
+          
+     <a href="survivor.html" class="button">SHARE YOUR STORY NOW</a>
+
+      </div>
+      <div class="survivor-image">
+        <img src="https://metoomvmt.org/wp-content/uploads/2023/02/Image-23.png" alt="">
+      </div>
+    </div>
+    
+    </div>
+   </section>
+
+   <!--homepage two-->
+   <section class="homepagetwo">
+    <h1 class="homepage-mission">MISSION AND VISION</h1>
+      <div class="cardd-container">
+        <div class="cardd">
+          <img src="womenn.png" alt="">
+          <div class="cardd-content">
+            <h3>OUR MISSION</h3>
+                <p>"Empowering individuals to end femicide and GBV through safe reporting, awareness and support"</p>
+          </div>
+        </div>
+        <div class="cardd">
+          <img src="image.png" alt="">
+          <div class="cardd-content">
+            <h3>OUR VISION</h3>
+            <p>"A Kenya free from femicide and gender-basedviolence, where every woman and girl, regardless of age and background, feels safe, empowered and heard!"</p>
+          </div>
+        </div>
+      </div>
+   </section>
+
+   <!--creator insights-->
+
+   <!--section class="homepage-four">
+    
+     <div class="card">
+      <img src="image8.jpg" alt="">
+      <div class="card-body">
+        <h1 class="card-title">Kezia :</h1>
+        <p class="card-subtitle"></p>
+          <p class="card-subs">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. A possimus tempore repellendus facere?
+          </p>
+        
+      </div>
+     </div>
+
+     <div class="card">
+      <img src="image9.jpg" alt="">
+      <div class="card-body">
+
+        <h1 class="card-title">Risper:</h1>
+        <p class="card-subtitle"></p>
+          <p class="card-subs">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. A possimus tempore repellendus facere?
+          </p>
+        
+      </div>
+     </div>
+
+     <div class="card">
+      <img src="image(a).jpg" alt="">
+      <div class="card-body">
+        <h1 class="card-title">Jane:</h1>
+        <p class="card-subtitle"></p>
+          <p class="card-subs">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. A possimus tempore repellendus facere?
+          </p>
+        
+      </div>
+     </div>
+     <div class="card">
+      <img src="image(b).jpg" alt="">
+      <div class="card-body">
+        <h1 class="card-title">Morghan :</h1>
+        <p class="card-subtitle"></p>
+          <p class="card-subs">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. A possimus tempore repellendus facere?
+          </p>
+        
+      </div>
+     </div>
+
+
+
+     </div>
+  </section>
+  <!--Alternative creator insights section-->
+  <h1 class="sectionn-title"> Creator insights</h1>
+  <div class="line"></div>
+  <div class="cardss-wrapper">
+    <div class="cards-grid">
+      <div class="cards">
+        <div class="img-box">
+          <img src="image8.jpg" alt="">
+        </div>
+        <div class="cards-content">
+      <h1 class="cards-heading">
+        RISPER
+      </h1>
+      <p class="cards-text">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita amet odit neque consequatur nisi. Sequi ab sunt, corporis quia alias, ipsa odit eum quasi facilis porro perferendis explicabo pariatur voluptate?
+      </p>
+    </div>
+      </div>
+      <div class="cards">
+        <div class="img-box">
+          <img src="image8.jpg" alt="">
+        </div>
+        <div class="cards-content">
+      <h1 class="cards-heading">
+        KEZIA
+      </h1>
+      <p class="cards-text">
+        "Eliminating femicide is a community-driven agenda. When we are united, we shall provide a safe space for our women and girls. IT STARTS WITH YOU AND ME!"
+      </p>
+      </div>
+    </div>
+
+      <div class="cards">
+        <div class="img-box">
+          <img src="image9.jpg" alt="">
+        </div>
+        <div class="cards-content">
+      <h1 class="cards-heading">
+        Morghan
+      </h1>
+      <p class="cards-text">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita amet odit neque consequatur nisi. Sequi ab sunt, corporis quia alias, ipsa odit eum quasi facilis porro perferendis explicabo pariatur voluptate?
+      </p>
+    
+      </div>
+  </div>
+
+      <div class="cards">
+        <div class="img-box">
+          <img src="image(a).jpg" alt="">
+        </div>
+        <div class="cards-content">
+      <h1 class="cards-heading">
+        JANE
+      </h1>
+      <p class="cards-text">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita amet odit neque consequatur nisi. Sequi ab sunt, corporis quia alias, ipsa odit eum quasi facilis porro perferendis explicabo pariatur voluptate?
+      </p>
+  </div>
+      </div>
+    </div>
+  </div>
+  </section>
+
+  <footer class="containerr">
+    <div class="footer-content1">
+      <h3>Reach Us Via:</h3>
+      <h4>Email:</h4>
+<p>zinduka@gmail.com</p>
+      <h4>Phone: </h4>
+      <p>+254 741936810</p>
+      <h4>Address: </h4>
+      <p>2391, Premium Plaza</p>
+    </div>
+    <div class="footer-content2">
+      <h3>Quick Links</h3>
+      <ul class="list">
+        <li><a href="report.html">Report</a></li>
+        <li><a href="donation.html">Donate</a></li>
+        <li><a href="program.html">Our Programs</a></li>
+
+      </ul>
+    </div>
+    <div class="footer-content3">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+      <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+      <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+      <li><a href=""><i class="fa-brands fa-square-twitter"></i></a></li>
+    </div>
+  </div>
+  
+  </footer>
+
+
+    <!--script code-->
+    <script> 
+        const menuBtn = document.querySelector('.menu-btn');
+        const navlinks = document.querySelector('.nav-links');
+        menuBtn.addEventListener('click', () => {
+            navlinks.classList.toggle('mobile-menu')
+        })
+    </script>
+</body>
+</html>
