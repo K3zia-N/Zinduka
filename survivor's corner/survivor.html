@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Zinduka</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="survivor.css">
+</head>
+<body>
+    <header class="hero-slider">
+      <div class="overlay"></div>
+
+
+        <div class="header-content">
+        <div class="top-right">
+    <h1>Survivor stories</h1>
+  
+  </div>
+  <nav class="navbar">
+  <div class="left-section">
+    <span class="logo">Zinduka</span>
+  </div>
+  <div class="right-section">
+    <a href="#">Home</a>
+    <a href="#">Survivors</a>
+    <a href="#">Resources</a>
+    <a href="#">Contact</a>
+    <button class="safety-exit" onclick="window.location.href='https://www.google.com'">Safety Exit</button>
+  </div>
+</nav>
+
+
+  <div class="container">
+    <div class="quote">
+      <blockquote>
+      "Your story could be the key that unlocks someone else's prison."
+      </blockquote>
+    </div>
+  </div>
+  </header>
+
+<h2 class="section-title animate-section" style="--delay: 0.2s;">MOMENTS THAT CHANGED US</h2>
+
+    <div class="stories-row animate-section" style="--delay: 0.4s;">
+  <div class="story-card">
+    <h3>Anonymous</h3>
+    <p>
+      For years I struggled with depression in silence.
+      <span class="dots">...</span>
+      <span class="more-text">
+        Sharing my story was the first step to healing. You are not alone.
+      </span>
+    </p>
+    <a href="anonymous.html" class="read-more-btn">Learn Her Journey</a>
+  </div>
+
+  <div class="story-card">
+    <h3>Maria K.</h3>
+    <p>
+      I never thought I'd recover after the trauma,
+      <span class="dots">...</span>
+      <span class="more-text">
+        but speaking up connected me to others who helped me grow stronger.
+      </span>
+    </p>
+    <a href="MariaK.html" class="read-more-btn">Learn Her Journey</a>
+  </div>
+
+  <div class="story-card">
+    <h3>Jamila</h3>
+    <p>
+      I chose to exist loudly
+      <span class="dots">...</span>
+      <span class="more-text">
+        and speaking up connected me to others who helped me grow stronger.
+      </span>
+    </p>
+    <a href="jamila.html" class="read-more-btn">Learn Her Journey</a>
+  </div>
+</div>
+
+
+    <div class="form-section animate-section" style="--delay: 0.6s;">
+  <h2>Share Your Story <span>📝</span></h2>
+  <form>
+    <div class="form-group">
+      <input type="text" id="name" name="name" required />
+      <label for="name">Name (or type 'Anonymous')</label>
+    </div>
+
+    <div class="form-group">
+      <textarea id="story" name="story" required></textarea>
+      <label for="story">Your Story</label>
+    </div>
+
+    <div class="form-group">
+      <input type="text" id="signature" name="signature" required />
+      <label for="signature">Digital Signature (Type your full name)</label>
+    </div>
+
+    <div class="checkbox-group">
+      <input type="checkbox" id="consent" required />
+      <label for="consent">I consent to sharing my story publicly on this platform.</label>
+    </div>
+
+    <button type="submit" class="btn"> Submit My Story</button>
+  </form>
+</div>
+
+
+  <footer class="site-footer">
+  <div class="footer-container">
+    <!-- About -->
+    <div class="footer-col">
+      <img src="images/logo.png" alt="Zinduka Logo" style="width: 120px; margin-bottom: 10px;">
+      <p>
+        Zinduka is a safe space for survivors of gender-based violence in Kenya.
+        We amplify voices, provide support, and work to end violence against women and girls.
+      </p>
+      <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
+      <p><i class="fas fa-envelope"></i> support@zinduka.org</p>
+    </div>
+
+    <!-- News -->
+    <div class="footer-col">
+      <h3>From News</h3>
+      <ul>
+        <li><a href="#">Kenya’s Movement to End GBV</a></li>
+        <li><a href="#">Zinduka Podcast on Healing</a></li>
+        <li><a href="#">Digital Tools for Safety</a></li>
+        <li><a href="#">Our Stories in the Press</a></li>
+      </ul>
+    </div>
+
+    <!-- Programs -->
+    <div class="footer-col">
+      <h3>Our Programs</h3>
+      <ul>
+        <li><a href="#">Safe Spaces</a></li>
+        <li><a href="#">Healing Circles</a></li>
+        <li><a href="#">Emergency Relocation</a></li>
+        <li><a href="#">Legal Aid & Counseling</a></li>
+      </ul>
+    </div>
+
+    <!-- Emergency Contact -->
+    <div class="footer-col">
+      <h3>Emergency Help 📞</h3>
+      <p><strong>Tap to call:</strong></p>
+      <ul class="emergency-links">
+        <li><a href="tel:116">📞 116 – Childline Kenya (Free)</a></li>
+        <li><a href="tel:1195">📞 1195 – GBV Helpline</a></li>
+        <li><a href="tel:999">📞 999 – Police Emergency</a></li>
+        <li><a href="tel:+254800721186">📞 +254 800 721 186 – Healthcare Assistance Kenya (HAK)</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p><strong>Disclaimer:</strong> Stories shared on this platform are personal experiences and do not replace professional advice. For emergencies, contact the listed hotlines immediately.</p>
+  </div>
+</footer>
+
+  <script>
+  const buttons = document.querySelectorAll(".read-more-btn");
+
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const card = btn.closest(".story-card");
+      const dots = card.querySelector(".dots");
+      const moreText = card.querySelector(".more-text");
+
+      if (moreText.style.display === "inline") {
+        moreText.style.display = "none";
+        dots.style.display = "inline";
+        btn.textContent = "Read More";
+      } else {
+        moreText.style.display = "inline";
+        dots.style.display = "none";
+        btn.textContent = "Read Less";
+      }
+    });
+  });
+  const survivors = [
+    {
+      name: "Anonymous",
+      short: "For years I struggled with depression in silence.",
+      link: "anonymous.html"
+    },
+    {
+      name: "Maria K.",
+      short: "I never thought I'd recover after the trauma.",
+      link: "MariaK.html"
+    },
+    {
+      name: "Jamila",
+      short: "I chose to exist loudly.",
+      link: "jamila.html"
+    }
+  ];
+
+  const container = document.getElementById('storiesContainer');
+
+  survivors.forEach(s => {
+    const card = document.createElement('div');
+    card.className = 'story-card';
+    card.innerHTML = `
+      <h3>${s.name}</h3>
+      <p>${s.short}</p>
+      <a href="${s.link}" class="read-more-btn">Read More</a>
+    `;
+    container.appendChild(card);
+  });
+
+
+</script>
+<script>
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target); // Ensures animation happens only once
+      }
+    });
+  }, { threshold: 0.2 });
+
+  document.querySelectorAll('.animate-section').forEach(section => {
+    observer.observe(section);
+  });
+</script>
+
+</body>
+</html>
