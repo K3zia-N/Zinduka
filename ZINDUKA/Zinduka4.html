@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="Stylesheet.css">
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <title>Zinduka</title>
+</head>
+<body>
+    <nav class="navbar">
+        <h1 class="logo">
+            END FEMICIDE
+        </h1>
+        <ul class="nav-links">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Survivors stories</a></li>
+            <li class="ctn"><a href="#">Contact Us</a></li>
+        </ul>
+        <img src="./images/menu-btn.jpg" alt="Menu" class="menu-btn">
+    </nav>
+    <header>
+       <div class="header_content">
+        <h2> RESPECT WOMEN</h2>
+        <div class="line"></div>
+        <h1>STOP THE VIOLENCE </h1>
+        <a href="#" class="ctn">Learn More</a>
+       </div> 
+    </header>
+    <!--mission and vision-->
+    <section class="ZINDUKA">
+        <div class="title">
+            <h1>MISSION AND VISION</h1>
+            <div class="line"></div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <img src="./images/pexels-cottonbro-7130220.jpg"alt="">
+                <h4>OUR MISSION </h4>
+                <p> jane</p>
+                <a href="#"class="ctn">Learn more</a>
+            </div>
+            <div class="col">
+                <img src="./images/download (3).jpg"alt="">
+                <h4>OUR VISION</h4>
+                <p> jane</p>
+                <a href="#"class="ctn">Learn more</a>
+            </div>
+        </div>
+    </section>
+    
+    <script> 
+        const menuBtn = document.querySelector('.menu-btn');
+        const navlinks = document.querySelector('.nav-links');
+        menuBtn.addEventListener('click', () => {
+            navlinks.classList.toggle('mobile-menu')
+        })
+    </script>
+</body>
+</html>

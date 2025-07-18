@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Zinduka Community Hub</title>
+    <link rel="stylesheet" href="hub.css" />
+</head>
+<body>
+    <header>
+        <h1>Zinduka Community Hub</h1>
+        <p>Join us in making a difference</p>
+    </header>
+
+    <main class="hub-container">
+        <div class="hub-card" onclick="showDetails('pads')">
+            <img src="https://source.unsplash.com/400x250/?school,girls" alt="Pads for Girls" />
+            <h2>Pads for Girls</h2>
+            <p>Help girls stay in school by supporting pad drives.</p>
+        </div>
+
+        <div class="hub-card" onclick="showDetails('feeding')">
+            <img src="https://source.unsplash.com/400x250/?feeding,children" alt="Feeding Children" />
+            <h2>Feeding Children</h2>
+            <p>Support feeding programs for vulnerable children.</p>
+        </div>
+
+        <div class="hub-card" onclick="showDetails('trees')">
+            <img src="https://source.unsplash.com/400x250/?tree,planting" alt="Tree Planting Drives" />
+            <h2>Tree Planting Drives</h2>
+            <p>Join campaigns for environmental sustainability.</p>
+        </div>
+
+        <div class="hub-card" onclick="showDetails('health')">
+            <img src="https://source.unsplash.com/400x250/?health,clinic" alt="Community Health Camps" />
+            <h2>Community Health Camps</h2>
+            <p>Participate in health outreach and screening programs.</p>
+        </div>
+    </main>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+        </div>
+    </div>
+
+    <script src="hub.js"></script>
+</body>
+</html>
