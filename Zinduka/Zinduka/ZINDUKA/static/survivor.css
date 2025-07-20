@@ -1,0 +1,588 @@
+
+
+body, html {
+      font-family: 'Poppins', sans-serif;
+      background-color: #ffffff;
+      margin: 0px;
+      padding: 0px;
+      color: #2b2b2b;
+      overflow-x: hidden;
+    }
+    header {
+      background-color: #fafafa;
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+    
+.logo img{
+    height: 60px;
+}
+.logo h4{
+    margin-top: -25px;
+    color: #cd789b;
+    font-family: 'Balsamiq', sans serif;
+}
+ul{
+    list-style: none;
+}
+
+.active{
+    color: #fe036b;
+    text-decoration: underline;
+    font-weight: bold;
+}
+.logo{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.navbar{
+    background-color: #490839;
+    display: flex;
+    position: fixed;
+    right: 0;
+    top: 0;
+    left: 0;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    color: #ff4500;
+    z-index: 1000;
+}
+
+/*Moves entire nav-links to the right*/
+.nav-links{
+    margin-left: auto;
+  
+}
+
+.nav-links ul{
+    gap: 3px;
+    list-style: none;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links ul li{
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 8px 10px;
+    margin-right: 25px;
+}
+
+/*styling the anchor tags inside nav*/
+.nav-links ul li a{
+    text-decoration: none;
+    color: rgb(247, 239, 239);
+    font-weight: 500;
+    padding: 5px 10px; 
+    text-align: right;
+    transition: all 0.3s ease-in-out;
+    letter-spacing: 1px;
+}
+.ctn1{
+  padding: 8px 12px;
+  background: #fe036b;
+  border-radius: 20px;
+  margin-bottom: 0;
+  margin-top: 50px;
+  display: block;
+  margin: 5px;
+  box-sizing: border-box;
+  font-weight: bold;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  align-items: center;
+  border-radius: 20px;
+  border-color: #202020 #1a1a1a #111;
+  text-align: center;
+  background-color: #cd789b;
+  background-clip: padding-box;
+  border: 1px solid;
+  background-image: linear-gradient(to bottom,rgb(210, 148, 143),rgb(16, 66, 82) );
+  box-shadow: inset 0 1px rgba(192, 111, 111, 0.09), 0 1px 1px rgba(0,0,0,.2); 
+}
+
+/*Hover effect*/
+.nav-links ul li a:hover{
+    color: hotpink;
+    border-bottom: 2px solid hotpink;
+    transition: all .1s ;
+}
+
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 30px;
+    }
+    .quote {
+      position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #FF4500;
+  font-size: 1.3rem;
+  font-style: italic;
+  background: #490839;
+  padding: 10px 20px;
+  border-radius: 8px;
+  z-index: 3;
+  animation: fadeInQuote 3s ease forwards;
+    }
+    @keyframes fadeInQuote{
+      from { opacity: 0; transform: translateX(-50%) translateY(10px); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+    }
+    
+    /* Footer */
+    .site-footer {
+  background-color: #1c1e21;
+  color: white;
+  padding: 40px 20px;
+  font-size: 0.95rem;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-col {
+  flex: 1 1 230px;
+  margin: 20px;
+}
+
+.footer-col h3 {
+  color: #FF4500;
+  margin-bottom: 15px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col a {
+  color: #ddd;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-col a:hover {
+  color: #FF4500;
+}
+
+.emergency-links a {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8px;
+  color: #ffdddd;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  padding-top: 15px;
+  margin-top: 30px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+    /* The banner effect*/
+    .hero-slider {
+  position: relative;
+  height: 90vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-slider::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position:  center;
+  animation: sliderBG 15s infinite;
+  z-index: 0;
+  transition: background-image 1s ease-in-out;
+  opacity: 0;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+/* Header Section*/
+.header-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+}
+
+/* NEW: Top-right positioning for h1 & p */
+.top-right {
+  top: -10px;
+  right: 500px;
+  text-align: center;
+  color: white;
+  margin-top: 25px;
+}
+
+.top-right h1 {
+  font-size: 75px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-bottom: 5px;
+  text-align: center;
+  
+}
+
+/* 🔄 Keyframes to transition background images */
+@keyframes sliderBG {
+  0% {
+    background-image: url("../static/images/a\ couple\ of\ women\ standing\ next\ to\ each\ other\,\ Midjourney.jpg");
+    opacity: 1;
+  }
+  33% {
+    background-image: url("../static/images/b441ab4a-d78b-4301-9b3c-0654a4e1657b.jpg");
+    opacity: 1;
+  }
+  66% {
+    background-image: url("../static/images/fe3dee9d-bfd5-4a9f-a1fb-95358d82d07e.jpg");
+    opacity: 0.3;
+  }
+  100% {
+    background-image: url("../static/images/de3ccf05-0e75-429b-b6c5-a4ea2b5577aa.jpg");
+    opacity: 1;
+  }
+}
+
+
+/* MOMENT THAT CHANGED US */
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #FF4500;
+}
+
+
+.stories-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.story-card {
+  background:  linear-gradient(#e3d1cf, #fff7f9);
+  padding: 20px;
+  width: 310px;
+  height: 300px; /* Equal to width to make it square */
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s;
+}
+
+.story-card:hover {
+  transform: translateY(-5px);
+}
+
+.read-more-btn {
+  background-color: #FF4500;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 10px #FF4500 transparent;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none; /* this removes the underline */
+}
+
+.read-more-btn:hover {
+  text-decoration: none;
+  background-color: #e03e00;
+  text-decoration: none; /* Ensure it stays clean */
+}
+
+
+
+.story-card h3 {
+  margin-top: 0;
+}
+
+.story-card p {
+  flex-grow: 1;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* FORM TO SHARE STORY */
+.form-section {
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px;
+  background:  linear-gradient(#e3d1cf, #fff7f9); 
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 123, 255, 0.1);
+  animation: fadeIn 1.2s ease;
+}
+
+.form-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+.form-section h2 span {
+  font-size: 1.5rem;
+  display: inline-block;
+  transform: rotate(-8deg);
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 16px 12px 16px 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.form-group textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.form-group label {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  color: #888;
+  font-size: 0.95rem;
+  pointer-events: none;
+  transition: all 0.2s ease-out;
+}
+
+.form-group input:focus + label,
+.form-group textarea:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group textarea:not(:placeholder-shown) + label {
+  top: -10px;
+  left: 10px;
+  background-color: #f0f4ff;
+  padding: 0 5px;
+  font-size: 0.8rem;
+  color: #FF4500;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.95rem;
+  color: #555;
+  margin-top: 15px;
+}
+
+.checkbox-group input[type="checkbox"] {
+  transform: scale(1.2);
+  margin-top: 5px;
+}
+
+.btn {
+  display: inline-block;
+  width: 100%;
+  margin-top: 30px;
+  padding: 14px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(to right, #FF4500, #490839);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.2);
+}
+
+.btn:hover {
+  background: linear-gradient(to right, #490839, #0056b3);
+  transform: scale(1.02);
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.story-content {
+  background-color: #fff;
+  padding: 30px;
+  margin: 20px auto;
+  max-width: 800px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #333;
+}
+/* ===== Navbar ===== */
+/*.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: #42003c; /* Your purple */
+ /* display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  color: white;
+}*/
+
+.left-section .logo {
+  font-weight: bold;
+  font-size: 18px;
+  color: #FF4500;
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.right-section a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.right-section a:hover {
+  text-decoration: underline;
+}
+
+.safety-exit {
+  background-color: #FF4500;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* ===== Cute Static Banner ===== */
+.static-banner {
+  background-image: url('images/download\ \(3\).jpg');
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+  width: 100%;
+  margin-bottom: 30px;
+  border-radius: 0 0 10px 10px;
+}
+
+/* ===== Story Content Section ===== */
+.story-content {
+  background-color: #ffff;
+  padding: 30px;
+  margin: 20px auto;
+  max-width: 800px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #333;
+}
+/*=====back to stories button =====*/
+.back-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #FF4500;
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: #490839;
+}
+/* the transition effects */
+.animate-section {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.6s ease-out;
+  will-change: opacity, transform;
+}
+
+.animate-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* fixed the whitespace problem*/
+html, body {
+  overflow-x: hidden;
+}
+
+.hero-slider::before {
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  will-change: opacity;
+  contain: layout;
+}
+
+.animate-section {
+  backface-visibility: hidden;
+  will-change: transform, opacity;
+}

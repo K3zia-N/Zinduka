@@ -1,0 +1,324 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0px;
+  background-image: url(closeup-woman-hand-written-with-no-word-palm\ \(1\).jpg);
+}
+/*styling section two/ NavbarSection*/
+.sectionTwo{
+  color: #FF4500;
+  height: 10vh;
+  background-color: #490839;
+  opacity: 0.8;
+  padding-top: 0;
+  padding-left: 0;
+  display: flex;
+  width: 100%;
+}
+/*Styling the hero section*/
+.hero{
+  text-align: center;
+  color: black;
+  height: 40vh;
+  margin-top: 0px;
+  background-color: #490839;
+}
+.hero-heading{
+  font-size: 30px;
+  font-weight: 89;
+  color: #e88c6b;
+  padding-top: 170px;
+  width: 100%;
+}
+h3{
+  color: #e88c6b;
+}
+
+.logo img{
+    height: 8vh;
+}
+.logo-title{
+    margin-top: -25px;
+    color: #cd789b;
+    font-family: 'Balsamiq Sans', sans serif;
+}
+ul{
+    list-style: none;
+}
+
+.active{
+    color: #fe036b;
+    text-decoration: underline;
+    font-weight: bold;
+}
+.logo{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.navbar{
+    background-color: #9f7385;
+    height: 10vh;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 50px;
+    color: #ff4500;
+    z-index: 100;
+}
+
+/*Moves entire nav-links to the right*/
+.nav-links{
+    margin-left: auto;
+}
+
+.nav-links ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links ul li{
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 8px 12px;
+}
+.ctn1{
+   padding: 10px;
+    padding-right: 0px;
+    background: #fe036b;
+    border-radius: 20px;
+    margin-bottom: 0;
+    margin-top: 50px;
+    display: block;
+    padding-left: 0px;
+    margin: 30px;
+  box-sizing: border-box;
+  font-weight: bold;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 20px;
+  border-color: #202020 #1a1a1a #111;
+  text-align: center;
+  background-color: #cd789b;
+  background-clip: padding-box;
+  border: 1px solid;
+  background-image: linear-gradient(to bottom,rgb(210, 148, 143),rgb(16, 66, 82) );
+  box-shadow: inset 0 1px rgba(192, 111, 111, 0.09), 0 1px 1px rgba(0,0,0,.2); 
+}
+
+/*styling the anchor tags inside nav*/
+.nav-links ul li a{
+    text-decoration: none;
+    color: rgb(247, 239, 239);
+    font-weight: 500;
+    padding: 5px 10px; 
+    text-align: right;
+    transition: all 0.3s ease-in-out;
+    letter-spacing: 1px;
+}
+
+/*Hover effect*/
+.nav-links ul li a:hover{
+    color: hotpink;
+    border-bottom: 2px solid hotpink;
+    transition: all .1s ;
+}
+
+
+/*styling the form*/
+.form-container {
+  max-width: 600px;
+  margin: auto;
+  background: 490839;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  background: linear-gradient(#e3d1cf, #fff7f9);
+}
+
+.form-container h1 {
+  text-align: center;
+  font-weight: 80px;
+  margin-bottom: 10px;
+  font-family: 'Outfit';
+}
+.form-container hr{
+  border: none;
+  margin: auto;
+  width: 120px;
+  left: 0;
+  height: 5px;
+  background-color: #e88c6b;
+  border-radius: 10px;
+  margin-bottom: 20px;
+
+}
+
+.form-container p {
+  text-align: center;
+  color: #666;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="file"],
+select,
+textarea {
+  width: 540px;
+  padding: 12px;
+  border: 1px solid #ded9d9;
+  border-radius: 15px;
+  font-size: 16px;
+  outline: none;
+
+}
+
+
+input:focus{
+  border: 1px solid #ff994f;
+}
+/*nput:hover{
+  border: 2px solid #ff994f;
+
+}*/
+textarea {
+  resize: vertical;
+}
+
+button {
+  background-color: #490839;
+  color: white;
+  font-family: 'Outfit';
+  font-weight: 200px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  display: inline-block;
+  margin-right: 30px;
+}
+
+button:hover {
+  background: linear-gradient(#642b17, #e88c6b);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+.form-group.double input,
+.form-group.triple input {
+  flex: 1;
+}
+
+.form-group.double,
+.form-group.triple {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+label.upload-label {
+  display: block;
+  font-size: 15px;
+  margin-bottom: 5px;
+  color: #444;
+}
+
+   /* Footer */
+    .site-footer {
+  background-color: #1c1e21;
+  color: white;
+  padding: 40px 20px;
+  font-size: 0.95rem;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-col {
+  flex: 1 1 230px;
+  margin: 20px;
+}
+
+.footer-col h3 {
+  color: #FF4500;
+  margin-bottom: 15px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col a {
+  color: #ddd;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-col a:hover {
+  color: #FF4500;
+}
+
+.emergency-links a {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8px;
+  color: #ffdddd;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  padding-top: 15px;
+  margin-top: 30px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #aaa;
+}

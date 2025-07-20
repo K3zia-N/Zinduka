@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anonymous Survivor Story</title>
+  <link rel="stylesheet" href="../static/survivor.css">
+  
+</head>
+<body>
+
+  <!--  NAVIGATION BAR -->
+ <nav class="navbar">
+  <div class="left-section">
+    <span class="logo">Zinduka</span>
+  </div>
+  <div class="right-section">
+    <a href="mainpage.html">Home</a>
+    <a href="survivor.html">Survivors</a>
+    <a href="#">Resources</a>
+    <a href="#">Contact</a>
+    <button class="safety-exit" onclick="window.location.href='https://www.google.com'">Safety Exit</button>
+  </div>
+</nav>
+
+  <!--  CUTE STATIC BANNER -->
+  <div class="static-banner"></div>
+
+  <!--  STORY CONTENT -->
+  <section class="container">
+    <h2 class="section-title">Her Voice, Her Power</h2>
+    <div class="story-content">
+      <p>
+        For years I struggled with depression in silence. No one could see it on my face. It was heavy... unbearable. But writing this is proof: I made it through.
+      </p>
+      <p>
+        Sharing my story was the first step to healing. I want you to know — you are not alone. Speak, write, cry, shout — do what you must to reclaim your light.
+      </p>
+    </div>
+    <div style="text-align: center; margin-top: 20px;">
+  <a href="survivor.html" class="back-btn"> Back to All Stories</a>
+</div>
+  </section>
+
+
+
+  <!--  FOOTER -->
+  <!-- Footer placeholder -->
+<div id="footer-placeholder"></div>
+
+<!-- JS that loads the footer -->
+<script>
+  fetch('footer.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('footer-placeholder').innerHTML = data;
+    })
+    .catch(err => console.error('Failed to load footer:', err));
+</script>
+
+
+
+</body>
+</html>
