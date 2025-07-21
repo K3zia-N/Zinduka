@@ -7,7 +7,7 @@ app = Flask(__name__)
 app.secret_key = '2025'
 
 # Cases: Submit a case
-@app.route('/', methods=['POST','GET'])
+@app.route('/submit_case', methods=['POST','GET'])
 def submit_case():
     if request.method=="POST":
         userName = request.form.get('username')
@@ -19,7 +19,15 @@ def submit_case():
         caseType = request.form['caseType']
         message =request.form['message']
         if not all([userName, contactNumber, address, email, country, city, caseType, message]):
-            flash('error','Missing required fields')
+            flash('error','Fill in all the required fields')
+            return render_template('report.html',
+                                   username=userName,
+                                   contactNumber=contactNumber,
+                                   email=email,
+                                   country=country,
+                                   city=city,
+                                   caseType=caseType,
+                                   message=message)
         try:        
             conn = get_db_connection()
             c = conn.cursor()
@@ -29,17 +37,27 @@ def submit_case():
             return redirect(url_for('home'))
         except Exception as e:
             print(f"Database Error: {e}")
-            flash('There was a problem submitting your case.', 'error')
-            return redirect(request.url)
-    return render_template('report.html')
+            flash('There was a problem submitting your case. Please try again.', 'error')
+            # return redirect(request.url)
+            return render_template('report.html',
+                           username=userName, 
+                           contactNumber=contactNumber, 
+                           address=address, 
+                           email=email, 
+                           country=country, 
+                           city=city, 
+                           caseType=caseType, 
+                           message=message)
+        return render_template('report.html')
 
+"""
 @app.route('/home')
 def home():
     return render_template('home.html') 
-
+"""
 
 # Survivor Stories: Submit a story
-@app.route('/', methods=['POST','GET'])
+@app.route('/submit_story', methods=['POST','GET'])
 def submit_story():
     if request.method=="POST":
         name=request.form['name']
@@ -48,6 +66,10 @@ def submit_story():
 
         if not all([name, yourStory, digitalSignature]):
             flash('Missing required fields','error',)
+            return render_template('survivor.html', 
+                                   name=name, 
+                                   yourStory=yourStory, 
+                                   digitalSignature=digitalSignature)
         try:    
            conn = get_db_connection()
            c = conn.cursor()
@@ -55,15 +77,20 @@ def submit_story():
                   (name, yourStory, digitalSignature))
            conn.commit()
            conn.close()
+           flash('Your story has been submitted successfully!', 'success')
            return redirect(url_for('home'))
         except Exception as e:
             flash(f'Database Error: {e}', 'error')
-            return redirect(request.url)
+            #return redirect(request.url)
+            return render_template('survivor.html', 
+                                   name=name, 
+                                   yourStory=yourStory, 
+                                   digitalSignature=digitalSignature)
     return render_template('survivor.html')
     
 
 # Donation : donate
-@app.route('/', methods=['GET','POST'])
+@app.route('/donate', methods=['GET','POST'])
 def donate():
     if request.method=="POST":
         donationAmount=request.form['donationAmount']
@@ -74,7 +101,13 @@ def donate():
 
         if not all([donationAmount, fullName, emailAddress, paymentMethod, message]):
             flash('Missing required fields', 'error')
-            return redirect(request.url)
+            return render_template('Donation.html', 
+                                   donationAmount=donationAmount, 
+                                   fullName=fullName,
+                                   emailAddress=emailAddress, 
+                                   paymentMethod=paymentMethod, 
+                                   message=message)
+            #return redirect(request.url)
         try:   
            conn = get_db_connection()
            c = conn.cursor()
@@ -86,7 +119,13 @@ def donate():
         
         except Exception as e:
             flash(f'Database Error: {e}', 'error')
-            return redirect(request.url)
+            return render_template('Donation.html', 
+                                   donationAmount=donationAmount, 
+                                   fullName=fullName,
+                                   emailAddress=emailAddress, 
+                                   paymentMethod=paymentMethod, 
+                                   message=message)
+            # return redirect(request.url)
         
     return render_template('donation.html')
       
@@ -98,6 +137,10 @@ def donate():
 def homepage():
     return render_template('mainpage.html')
 
+@app.route('/home')
+def home():
+    return render_template('home.html') 
+"""
 @app.route('/report', methods=['GET'])
 def case_form():
     return render_template('report.html')
@@ -109,7 +152,7 @@ def stories_page():
 @app.route('/donate', methods=['GET'])
 def donation_page():
     return render_template('Donation.html')
-
+"""
 @app.route('/program')
 def program():
     return render_template('program.html')
