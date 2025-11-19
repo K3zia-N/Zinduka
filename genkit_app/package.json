@@ -1,0 +1,13 @@
+{
+  "name": "zinduka-genkit",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "node flows.js"
+  },
+  "dependencies": {
+    "@genkit-ai/core": "^1.0.0",
+    "@genkit-ai/google-genai": "^1.0.0",
+    "node-fetch": "^3.0.0"
+  }
+}
