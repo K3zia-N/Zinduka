@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Report a Case - Rana</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='report.css') }}">
+</head>
+<body>
+
+  <!--navbar-->
+<nav class="navbar">
+      <div class="logo">
+        <img src="{{ url_for('static', filename='images/result.png') }}" alt="Femicide Logo">
+        <!--h4 class="logo-title">ZINDUKA</h4-->
+      </div>
+        <div class="nav-links">
+          <ul>
+           <li><a href="{{ url_for('homepage') }}">HOME</a></li>
+           <li class="active"><a href="{{ url_for('case_form') }}">REPORT</a></li>
+           <li><a href="{{ url_for('donation_page') }}">DONATE</a></li>
+           <li><a href="{{ url_for('stories_page') }}">SURVIVOR VOICE</a></li>
+            <li><a href="{{ url_for('communityHub') }}">HUB</a></li>
+           <li class="ctn1"><a href="https://www.google.com">Safety Exit</a></li>
+        </ul>
+        </div> 
+    </nav>
+<!--end of navbar-->
+
+<!--Hero-->
+<header class="hero">
+  <div class="container">
+    <div class="hero-heading">
+      Do You Need Help? Are You in Danger?
+    </div>
+    <h3>Fill the form now to report</h3>
+  </div>
+</header>
+<!--Form-->
+<section class="sectionThree">
+  <div class="form-container">
+    <h1>Report a Case</h1>
+    <hr>
+    <p>Please fill out the form to report a case. Your information will be kept confidential.</p>
+    <form id="caseForm" action="/submit-case" method="POST">
+      <div class="form-group double">
+        <label for="text">Username </label>
+        <input type="text" name="username" class=""/>
+    
+      </div>
+
+      <div class="form-group double">
+        <label for="text">Contact Number </label>
+        <input type="tel" name="contactNumber"/>
+        <label for="email">Email</label>
+        <input type="email" name="email"/>
+      </div>
+        <label for="text">Address </label>
+        <input type="text" name="address"/>
+        <label for="text">Country</label>
+        <input type="text" name="country"/>
+
+
+      <div class="form-group triple">
+        <label for="text">City</label>
+        <select name="city" required>
+        <option value="">Choose Your City</option>
+        <option value="mombasa">Mombasa</option>
+        <option value="kwale">Kwale</option>
+        <option value="kilifi">Kilifi</option>
+        <option value="tana-river">Tana River</option>
+        <option value="lamu">Lamu</option>
+        <option value="taita-taveta">Taita Taveta</option>
+        <option value="wajir">Wajir</option>
+        <option value="mandera">Mandera</option>
+        <option value="marsabit">Marsabit</option>
+        <option value="isiolo">Isiolo</option>
+        <option value="meru">Meru</option>
+        <option value="tharaka-nithi">Tharaka Nithi</option>
+        <option value="embu">Embu</option>
+        <option value="kitui">Kitui</option>
+        <option value="machakos">Machakos</option>
+        <option value="makueni">Makueni</option>
+        <option value="nyandarua">Nyandarua</option>
+        <option value="nyeri">Nyeri</option>
+        <option value="kirinyaga">Kirinyaga</option>
+        <option value="murangas">Murang'a</option>
+        <option value="kiambu">Kiambu</option>
+        <option value="west-pokot">West Pokot</option>
+        <option value="samburu">Samburu</option>
+        <option value="trans-nzoia">Trans-Nzoia</option>
+        <option value="uasin-gishu">Uasin Gishu</option>
+        <option value="elgeyo-marakwet">Elgeyo-Marakwet</option>
+        <option value="nandi">Nandi</option>
+        <option value="baringo">Baringo</option>
+        <option value="laikipia">Laikipia</option>
+        <option value="nakuru">Nakuru</option>
+        <option value="narok">Narok</option>
+        <option value="kajiado">Kajiado</option>
+        <option value="kericho">Kericho</option>
+        <option value="bomet">Bomet</option>
+        <option value="kakamega">Kakamega</option>
+        <option value="vihiga">Vihiga</option>
+        <option value="bungoma">Bungoma</option>
+        <option value="busia">Busia</option>
+        <option value="siaya">Siaya</option>
+        <option value="kisumu">Kisumu</option>
+        <option value="homa-bay">Homa Bay</option>
+        <option value="migori">Migori</option>
+        <option value="nairobi">Nairobi</option>
+        <option value="kisii">Kisii</option>
+        <option value="nyamira">Nyamira</option>
+        </select>
+      </div>
+
+<div>
+
+      <label class="upload-label">
+        Upload your file:
+        <input type="file" name="fileUpload" />
+      </label>
+<label for="caseType">Case type</label>
+      <select name="caseType" required>
+        <option value="">Select a case type</option>
+        <option value="harassment">Harassment</option>
+        <option value="fraud">Fraud</option>
+        <option value="abuse">Abuse</option>
+        <option value="other">Other</option>
+      </select>
+      </div>
+
+      <div class="form-group">
+        <p>Would you like to be notified about our services?</p>
+        <label><input type="radio" name="notify" value="yes" /> Yes</label>
+        <label><input type="radio" name="notify" value="no" /> No</label>
+      </div>
+
+      <textarea name="message" rows="5" placeholder="Write your message or case details here..." required></textarea>
+
+      <button type="submit">Submit Case <img src="" alt=""></button>
+    </form>
+  </div>
+</section>
+
+    <footer class="site-footer">
+  <div class="footer-container">
+    <!-- About -->
+    <div class="footer-col">
+      <div class="">
+      <img src="{{ url_for('static', filename='images/result.png') }}" alt="Zinduka Logo" style="width: 120px; margin-bottom: 10px;">
+    <h4>ZINDUKA</h4>  
+    </div>
+      <p>
+        Zinduka is a safe space for survivors of gender-based violence in Kenya.
+        We amplify voices, provide support, and work to end violence against women and girls.
+      </p>
+      <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
+      <p><i class="fas fa-envelope"></i> support@zinduka.org</p>
+    </div>
+
+    <!-- News -->
+    <div class="footer-col">
+      <h3>From News</h3>
+      <ul>
+        <li><a href="#">Kenya’s Movement to End GBV</a></li>
+        <li><a href="#">Zinduka Podcast on Healing</a></li>
+        <li><a href="#">Digital Tools for Safety</a></li>
+        <li><a href="#">Our Stories in the Press</a></li>
+      </ul>
+    </div>
+
+    <!-- Programs -->
+    <div class="footer-col">
+      <h3>Our Programs</h3>
+      <ul>
+        <li><a href="#">Safe Spaces</a></li>
+        <li><a href="#">Healing Circles</a></li>
+        <li><a href="#">Emergency Relocation</a></li>
+        <li><a href="#">Legal Aid & Counseling</a></li>
+      </ul>
+    </div>
+
+    <!-- Emergency Contact -->
+    <div class="footer-col">
+      <h3>Emergency Help 📞</h3>
+      <p><strong>Tap to call:</strong></p>
+      <ul class="emergency-links">
+        <li><a href="tel:116">📞 116 – Childline Kenya (Free)</a></li>
+        <li><a href="tel:1195">📞 1195 – GBV Helpline</a></li>
+        <li><a href="tel:999">📞 999 – Police Emergency</a></li>
+        <li><a href="tel:+254800721186">📞 +254 800 721 186 – Healthcare Assistance Kenya (HAK)</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p><strong>Disclaimer:</strong> Stories shared on this platform are personal experiences and do not replace professional advice. For emergencies, contact the listed hotlines immediately.</p>
+  </div>
+</footer>
+
+</body>
+</html>

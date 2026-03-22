@@ -1,0 +1,111 @@
+<!-- jamila-n.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Survivor Story – Jamila N.</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='survivor.css') }}">
+</head>
+<body>
+ <nav class="navbar">
+  <div class="left-section">
+    <span class="logo">Zinduka</span>
+  </div>
+  <div class="right-section">
+    <a href="{{ url_for('homepage') }}">Home</a>
+    <a href="{{ url_for('stories_page') }}">Survivors</a>
+    <a href="#">Resources</a>
+    <a href="#">Contact</a>
+    <button class="safety-exit" onclick="window.location.href='https://www.google.com'">Safety Exit</button>
+  </div>
+</nav>
+
+  <!--  CUTE STATIC BANNER -->
+  <div class="static-banner"></div>
+
+  <!-- STORY CONTENT -->
+  <section class="container">
+    <h2 class="section-title">Her Voice, Her Power</h2>
+    <div class="story-content">
+    <p>
+      I was scared to speak. Scared of what people would say. But silence weighed more heavily than judgment ever could.Growing up, I was taught to stay silent. “Good girls don’t talk back,” they’d say. In my rural community, it’s common for girls to be married off by the time they’re 17. I thought it was normal—until it almost became my reality.
+
+When I turned 16, my uncle—who was my guardian after my parents passed—told me I would marry a 45-year-old man from a neighboring county. I refused. I wanted to finish school. I had dreams of becoming a lawyer.
+
+He didn’t care. When I spoke out, he called me disrespectful. He locked me in a room for three days without food, threatening to “teach me how girls behave.” I was terrified.
+
+But I remembered something my high school teacher once said: “Silence is consent.” With the little strength I had, I broke a window and ran—barefoot—until I reached a nearby chief's camp. They connected me to a rescue center that took me in.
+
+At the shelter, I found my voice again. I went back to school. I met girls who had faced even worse, and together, we shared our stories. I spoke at a local community meeting, publicly denouncing child marriage. My voice trembled, but it was heard.
+
+Today, I live with a loving host family and mentor younger girls in my village about their rights, safety, and education.
+
+I am no longer a victim—I am a voice. And I will never be silenced again.
+      Writing my truth gave me peace. My scars are real, but so is my joy. To every survivor your story is your own, and it matters deeply.
+    </p>
+  </div>
+  <div style="text-align: center; margin-top: 20px;">
+  <a href="{{ url_for('stories_page') }}" class="back-btn"> Back to All Stories</a>
+</div>
+  </section>
+
+
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+  <div class="footer-container">
+    <!-- About -->
+    <div class="footer-col">
+      <div class="">
+      <img src="{{ url_for('static', filename='images/result.png') }}" alt="Zinduka Logo" style="width: 120px; margin-bottom: 10px;">
+    <h4>ZINDUKA</h4>  
+    </div>
+      <p>
+        Zinduka is a safe space for survivors of gender-based violence in Kenya.
+        We amplify voices, provide support, and work to end violence against women and girls.
+      </p>
+      <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
+      <p><i class="fas fa-envelope"></i> support@zinduka.org</p>
+    </div>
+
+    <!-- News -->
+    <div class="footer-col">
+      <h3>From News</h3>
+      <ul>
+        <li><a href="#">Kenya's Movement to End GBV</a></li>
+        <li><a href="#">Zinduka Podcast on Healing</a></li>
+        <li><a href="#">Digital Tools for Safety</a></li>
+        <li><a href="#">Our Stories in the Press</a></li>
+      </ul>
+    </div>
+
+    <!-- Programs -->
+    <div class="footer-col">
+      <h3>Our Programs</h3>
+      <ul>
+        <li><a href="#">Safe Spaces</a></li>
+        <li><a href="#">Healing Circles</a></li>
+        <li><a href="#">Emergency Relocation</a></li>
+        <li><a href="#">Legal Aid & Counseling</a></li>
+      </ul>
+    </div>
+
+    <!-- Emergency Contact -->
+    <div class="footer-col">
+      <h3>Emergency Help 📞</h3>
+      <p><strong>Tap to call:</strong></p>
+      <ul class="emergency-links">
+        <li><a href="tel:116">📞 116 – Childline Kenya (Free)</a></li>
+        <li><a href="tel:1195">📞 1195 – GBV Helpline</a></li>
+        <li><a href="tel:999">📞 999 – Police Emergency</a></li>
+        <li><a href="tel:+254800721186">📞 +254 800 721 186 – Healthcare Assistance Kenya (HAK)</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p><strong>Disclaimer:</strong> Stories shared on this platform are personal experiences and do not replace professional advice. For emergencies, contact the listed hotlines immediately.</p>
+  </div>
+</footer>
+
+</body>
+</html>

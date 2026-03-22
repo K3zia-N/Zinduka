@@ -1,0 +1,115 @@
+<!-- maria-k.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Survivor Story – Maria K.</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='survivor.css') }}">
+</head>
+<body>
+ <nav class="navbar">
+  <div class="left-section">
+    <span class="logo">Zinduka</span>
+  </div>
+  <div class="right-section">
+    <a href="{{ url_for('homepage') }}">Home</a>
+    <a href="{{ url_for('stories_page') }}">Survivors</a>
+    <a href="#">Resources</a>
+    <a href="#">Contact</a>
+    <button class="safety-exit" onclick="window.location.href='https://www.google.com'">Safety Exit</button>
+  </div>
+</nav>
+
+  <!--  CUTE STATIC BANNER -->
+  <div class="static-banner"></div>
+
+  <!--  STORY CONTENT -->
+  <section class="container">
+    <h2 class="section-title">Her Voice, Her Power</h2>
+    <div class="story-content">
+    <p>
+      I never thought I'd recover after the trauma. Every day felt like a blur. I never thought I’d be the woman who stayed. I was 24, fresh out of university, and completely in love with a man I thought I knew. The first time he slapped me, I was too shocked to cry. I remember standing there, paralyzed, while he begged me not to leave. He said he was sorry. That it was the stress. That I had made him angry.
+
+I believed him. Because I loved him.
+
+But love turned into fear. He controlled what I wore, who I spoke to, where I went. If I didn’t answer his calls fast enough, I’d be punished. At first, it was yelling. Then slaps. Then punches. I started wearing makeup just to cover the bruises, smiling through pain so no one would ask questions.
+
+One night, he accused me of cheating, locked the door, and took my phone. I was trapped for two days without food. It was in that moment—hungry, cold, and alone—that I realized: if I stayed, I would die.
+
+I had hidden a tiny phone in my sock drawer that he didn’t know about. I texted my friend, and she came with the police. That was the last time I saw him.
+
+I moved in with a relative in another town, enrolled in therapy, and slowly began to rebuild my life. It wasn’t easy. The trauma didn’t disappear overnight. But I am healing.
+
+Today, I work with a local women's organization, helping survivors escape and recover. I tell my story not for pity—but to remind others that survival is possible.
+
+Choosing life was the hardest decision I ever made. But it saved me. But speaking up connected me to others who reminded me of my strength.
+      Healing doesn't mean forgetting — it means reclaiming power. If you're reading this, I hope you know you're stronger than your story.
+    </p>
+
+  </div>
+  <div style="text-align: center; margin-top: 20px;">
+  <a href="{{ url_for('stories_page') }}" class="back-btn"> Back to All Stories</a>
+</div>
+  </section>
+
+
+
+  <!--  FOOTER -->
+  <footer class="site-footer">
+  <div class="footer-container">
+    <!-- About -->
+    <div class="footer-col">
+      <div class="">
+      <img src="{{ url_for('static', filename='images/result.png') }}" alt="Zinduka Logo" style="width: 120px; margin-bottom: 10px;">
+    <h4>ZINDUKA</h4>  
+    </div>
+      <p>
+        Zinduka is a safe space for survivors of gender-based violence in Kenya.
+        We amplify voices, provide support, and work to end violence against women and girls.
+      </p>
+      <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
+      <p><i class="fas fa-envelope"></i> support@zinduka.org</p>
+    </div>
+
+    <!-- News -->
+    <div class="footer-col">
+      <h3>From News</h3>
+      <ul>
+        <li><a href="#">Kenya's Movement to End GBV</a></li>
+        <li><a href="#">Zinduka Podcast on Healing</a></li>
+        <li><a href="#">Digital Tools for Safety</a></li>
+        <li><a href="#">Our Stories in the Press</a></li>
+      </ul>
+    </div>
+
+    <!-- Programs -->
+    <div class="footer-col">
+      <h3>Our Programs</h3>
+      <ul>
+        <li><a href="#">Safe Spaces</a></li>
+        <li><a href="#">Healing Circles</a></li>
+        <li><a href="#">Emergency Relocation</a></li>
+        <li><a href="#">Legal Aid & Counseling</a></li>
+      </ul>
+    </div>
+
+    <!-- Emergency Contact -->
+    <div class="footer-col">
+      <h3>Emergency Help 📞</h3>
+      <p><strong>Tap to call:</strong></p>
+      <ul class="emergency-links">
+        <li><a href="tel:116">📞 116 – Childline Kenya (Free)</a></li>
+        <li><a href="tel:1195">📞 1195 – GBV Helpline</a></li>
+        <li><a href="tel:999">📞 999 – Police Emergency</a></li>
+        <li><a href="tel:+254800721186">📞 +254 800 721 186 – Healthcare Assistance Kenya (HAK)</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p><strong>Disclaimer:</strong> Stories shared on this platform are personal experiences and do not replace professional advice. For emergencies, contact the listed hotlines immediately.</p>
+  </div>
+</footer>
+
+
+</body>
+</html>

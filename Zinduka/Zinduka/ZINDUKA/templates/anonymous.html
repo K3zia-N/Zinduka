@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anonymous Survivor Story</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='survivor.css') }}">
+  
+</head>
+<body>
+
+  <!--  NAVIGATION BAR -->
+ <nav class="navbar">
+  <div class="left-section">
+    <span class="logo">Zinduka</span>
+  </div>
+  <div class="right-section">
+    <a href="{{ url_for('homepage') }}">Home</a>
+    <a href="{{ url_for('stories_page') }}">Survivors</a>
+    <a href="#">Resources</a>
+    <a href="#">Contact</a>
+    <button class="safety-exit" onclick="window.location.href='https://www.google.com'">Safety Exit</button>
+  </div>
+</nav>
+
+  <!--  CUTE STATIC BANNER -->
+  <div class="static-banner"></div>
+
+  <!--  STORY CONTENT -->
+  <section class="container">
+    <h2 class="section-title">Her Voice, Her Power</h2>
+    <div class="story-content">
+      <p>
+        For years I struggled with depression in silence. No one could see it on my face. It was heavy... unbearable. But writing this is proof: I made it through.
+      </p>
+      <p>
+        Sharing my story was the first step to healing. He was perfect in public—charming, funny, respectful. Everyone loved him. So when I told people he was hurting me, no one believed it. “Wanjiku, he would never!”
+
+But behind closed doors, he was controlling and violent. He isolated me from my family, took control of my finances, and humiliated me daily. The physical abuse started when I was pregnant with our first child. I stayed because I believed that a child needed both parents. I stayed because I was ashamed.
+
+The abuse escalated. I would wear long sleeves in the heat just to hide the bruises. I had to ask permission before leaving the house. I felt like a prisoner in my own home.
+
+Then one night, he pushed our daughter during a rage. That was it. I looked into her scared eyes and knew I had to leave—not just for me, but for her.
+
+I packed what I could and fled to a women’s refuge. We had nothing but each other. At the shelter, I learned about trauma, healing, and self-worth. I started sewing to earn money. One dress turned into ten, then a small business.
+
+Now I run a community tailoring shop where I train other survivors to earn a living. Each stitch is a step toward freedom.
+
+My past may be broken, but my future is bold. I am not just surviving—I am thriving. And I will keep fighting for women like me to have a second chance at life. I want you to know — you are not alone. Speak, write, cry, shout — do what you must to reclaim your light.
+      </p>
+    </div>
+    <div style="text-align: center; margin-top: 20px;">
+  <a href="{{ url_for('stories_page') }}" class="back-btn"> Back to All Stories</a>
+</div>
+  </section>
+
+
+
+  <!--  FOOTER -->
+  <footer class="site-footer">
+  <div class="footer-container">
+    <!-- About -->
+    <div class="footer-col">
+      <div class="">
+      <img src="{{ url_for('static', filename='images/result.png') }}" alt="Zinduka Logo" style="width: 120px; margin-bottom: 10px;">
+    <h4>ZINDUKA</h4>  
+    </div>
+      <p>
+        Zinduka is a safe space for survivors of gender-based violence in Kenya.
+        We amplify voices, provide support, and work to end violence against women and girls.
+      </p>
+      <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
+      <p><i class="fas fa-envelope"></i> support@zinduka.org</p>
+    </div>
+
+    <!-- News -->
+    <div class="footer-col">
+      <h3>From News</h3>
+      <ul>
+        <li><a href="#">Kenya's Movement to End GBV</a></li>
+        <li><a href="#">Zinduka Podcast on Healing</a></li>
+        <li><a href="#">Digital Tools for Safety</a></li>
+        <li><a href="#">Our Stories in the Press</a></li>
+      </ul>
+    </div>
+
+    <!-- Programs -->
+    <div class="footer-col">
+      <h3>Our Programs</h3>
+      <ul>
+        <li><a href="#">Safe Spaces</a></li>
+        <li><a href="#">Healing Circles</a></li>
+        <li><a href="#">Emergency Relocation</a></li>
+        <li><a href="#">Legal Aid & Counseling</a></li>
+      </ul>
+    </div>
+
+    <!-- Emergency Contact -->
+    <div class="footer-col">
+      <h3>Emergency Help 📞</h3>
+      <p><strong>Tap to call:</strong></p>
+      <ul class="emergency-links">
+        <li><a href="tel:116">📞 116 – Childline Kenya (Free)</a></li>
+        <li><a href="tel:1195">📞 1195 – GBV Helpline</a></li>
+        <li><a href="tel:999">📞 999 – Police Emergency</a></li>
+        <li><a href="tel:+254800721186">📞 +254 800 721 186 – Healthcare Assistance Kenya (HAK)</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p><strong>Disclaimer:</strong> Stories shared on this platform are personal experiences and do not replace professional advice. For emergencies, contact the listed hotlines immediately.</p>
+  </div>
+</footer>
+
+
+
+</body>
+</html>

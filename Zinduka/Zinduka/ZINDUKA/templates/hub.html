@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Community Hub</title>
+    <meta property="og:title" content="Travel Agency" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+<link rel="stylesheet" href="{{ url_for('static', filename='hub.css') }}">
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;  -webkit-font-smoothing: antialiased;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;  color: inherit;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}details {  display: block;  margin: 0;  padding: 0;}summary::-webkit-details-marker {  display: none;}[data-thq="accordion"] [data-thq="accordion-content"] {  max-height: 0;  overflow: hidden;  transition: max-height 0.3s ease-in-out;  padding: 0;}[data-thq="accordion"] details[data-thq="accordion-trigger"][open] + [data-thq="accordion-content"] {  max-height: 1000vh;}details[data-thq="accordion-trigger"][open] summary [data-thq="accordion-icon"] {  transform: rotate(180deg);}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Poppins;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.55;
+        color: var(--dl-color-gray-black);
+        background: var(--dl-color-gray-white);
+
+        fill: var(--dl-color-gray-black);
+      }
+    </style>
+    <style>
+      /* Button Hover Effects */
+      .outline-button-button,
+      .outline-button-button1,
+      .outline-button-button2,
+      .outline-button-button3,
+      .outline-button-button4,
+      .outline-button-button5 {
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+        transform: translateY(0);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+      
+      .outline-button-button:hover,
+      .outline-button-button1:hover,
+      .outline-button-button2:hover,
+      .outline-button-button3:hover,
+      .outline-button-button4:hover,
+      .outline-button-button5:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(255, 69, 0, 0.3);
+        background: linear-gradient(135deg, #FF4500, #FF6B35);
+        color: white;
+        border-color: #FF4500;
+      }
+      
+      .outline-button-button:hover span,
+      .outline-button-button1:hover span,
+      .outline-button-button2:hover span,
+      .outline-button-button3:hover span,
+      .outline-button-button4:hover span,
+      .outline-button-button5:hover span {
+        color: white;
+        font-weight: 600;
+      }
+      
+      /* Active state for better feedback */
+      .outline-button-button:active,
+      .outline-button-button1:active,
+      .outline-button-button2:active,
+      .outline-button-button3:active,
+      .outline-button-button4:active,
+      .outline-button-button5:active {
+        transform: translateY(-1px);
+        box-shadow: 0 3px 12px rgba(255, 69, 0, 0.4);
+      }
+      
+      /* Pulse animation on focus */
+      .outline-button-button:focus,
+      .outline-button-button1:focus,
+      .outline-button-button2:focus,
+      .outline-button-button3:focus,
+      .outline-button-button4:focus,
+      .outline-button-button5:focus {
+        outline: none;
+        animation: pulse 1.5s infinite;
+      }
+      
+      @keyframes pulse {
+        0% {
+          box-shadow: 0 0 0 0 rgba(255, 69, 0, 0.7);
+        }
+        70% {
+          box-shadow: 0 0 0 10px rgba(255, 69, 0, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(255, 69, 0, 0);
+        }
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/animate.css@4.1.1/animate.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
+    />
+  </head>
+  <body>
+    <link rel="stylesheet" href="{{ url_for('static', filename='hub.css') }}">
+    <div>
+      <link href="{{ url_for('static', filename='index.css') }}" rel="stylesheet" />
+<!--Navbar-->
+      <nav class="navbar">
+      <div class="logo">
+        <img src="{{ url_for('static', filename='images/result.png') }}" alt="Femicide Logo ">
+        <h4>ZINDUKA</h4>
+      </div>
+        
+        <!-- Hamburger Menu Icon -->
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        
+        <div class="nav-links" id="nav-links">
+          <ul>
+            <li class="active"><a href="{{ url_for('homepage') }}">HOME</a></li>
+            <li><a href="{{ url_for('case_form') }}">REPORT</a></li>
+            <li><a href="{{ url_for('donation_page') }}">DONATE</a></li>
+            <li><a href="{{ url_for('stories_page') }}">SURVIVOR VOICE</a></li>
+            <li class="ctn1"><a href="https://www.google.com">Exit</a></li>
+        </ul>
+        </div> 
+    </nav>
+
+      <div class="landing-page-container1">
+        <div class="landing-page-top-container">
+          <!-- Navbar removed to keep only background and content -->
+          <div class="landing-page-hero">
+            <div class="landing-page-content-container">
+              <h1 class="Heading landing-page-text19">Community Hub</h1>
+              <h2 class="Subheading landing-page-subheading">
+                Become informed with available resources
+              </h2>
+              <span class="landing-page-text20">
+                <span>Empowering individuals and fostering a supportive network </span>
+                <br />
+                <span>to address gender-based violence and related issues.</span>
+              </span>
+              <solid-button-wrapper-exrw class="solid-button-wrapper-exrw">
+                <!--SolidButton component-->
+                <div class="solid-button-container2">
+                  <button class="solid-button-button2 button Button">
+                    <span>Explore resources below</span>
+                  </button>
+                </div>
+              </solid-button-wrapper-exrw>
+            </div>
+          </div>
+        </div>
+        <div id="main-section" class="landing-page-main">
+          <h1>Articles and Blogs</h1>
+          <span class="landing-page-text25">Recommended</span>
+          <div class="landing-page-cards-container">
+            <place-card-wrapper class="place-card-wrapper">
+              <!--PlaceCard component-->
+              <div class="place-card-container1">
+                <img
+                  alt="image"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7vReoptdhghgofD0zCPNyo8mHH-9JHbCBzDp1dMGVl_516r2qvlFGzlg3QSXfJfDeCG48Zwjq4AHD1gqZyB-hKeVXBLFWCu-2fm8e-zArbpkfGLFYPQIGsGyY_aoZQKOc2ijPODqkaFZErHY6aTaZHTEXxz6evz33Miy3P19fm0a1g7FaWCPDnrci1lzBHPNCs7H6ufqar1iGthh9QnuyHP2yetvQ0XPA6tqPeH_1Kq_x6ir3IYAY1Imv85hLO1ICzWF1D9j07v5n"
+                  class="place-card-image"
+                />
+                <div class="place-card-container2">
+                  <span class="place-card-text1"><span>Understanding all things GBV</span></span>
+                  <span class="place-card-text2">
+                    <span>
+                      Explore the root causes and different forms of gender-based violence. 
+                    </span>
+                  </span>
+                  <outline-button-wrapper class="outline-button-wrapper">
+                    <!--OutlineButton component-->
+                    <div class="outline-button-container">
+                      <button class="outline-button-button button Button" onclick="window.open('https://nation.africa/kenya/news/gender/heartbreaking-truths-the-hidden-scars-of-gender-based-violence-in-kenya-4846810?utm_source=chatgpt.com', '_blank')">
+                        <span>Learn More</span>
+                      </button>
+                    </div>
+                  </outline-button-wrapper>
+                </div>
+              </div>
+            </place-card-wrapper>
+            <place-card-wrapper-s9px class="place-card-wrapper-s9px">
+              <!--PlaceCard component-->
+              <div class="place-card-container3">
+                <img
+                  alt="image"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOnQtgLKkEiA0rGkFDyT5Q_r78ttYD9s4AxDHsOz95kOBxuWjxy9GRofh7mHyC9w0RlTYAaT3aJRsPeV6CRoeodVdzzLMwxMRIjQ2NBpT_gdpzeL0W2ax8AcJL_uGGi6bP7QwuSvSN3x0gaDUrBMrHANsE4DdelDTCHuWzsjPs6pM5pUWApJsEAi-ZryMWrL47Rvhdc1LPmIPwctBQd5Z6Y14_a1zeTZF0-pvkrrhj0wqAG_GPh5KKnX2j3lINnbooyfy20LCw5F1s"
+                  class="place-card-image1"
+                />
+                <div class="place-card-container4">
+                  <span class="place-card-text3"><span>The Impact of GBV on Mental Health</span></span>
+                  <span class="place-card-text4">
+                    <span>
+                     Learn about the psychological effects of GBV and how to cope.
+                    </span>
+                  </span>
+                  <outline-button-wrapper-fgfa
+                    class="outline-button-wrapper-fgfa"
+                  >
+                    <!--OutlineButton component-->
+                    <div class="outline-button-container1">
+                      <button class="outline-button-button1 button Button" onclick="window.open('https://canadianwomen.org/blog/gender-based-violence-impacts-mental-health/', '_blank')">
+                        <span>Discover More</span>
+                      </button>
+                    </div>
+                  </outline-button-wrapper-fgfa>
+                </div>
+              </div>
+            </place-card-wrapper-s9px>
+            <place-card-wrapper-icnl class="place-card-wrapper-icnl">
+              <!--PlaceCard component-->
+              <div class="place-card-container5">
+                <img
+                  alt="image"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqFwCwxtRcYhJVzE78XTf7UpK0pxMXIGOqj8Ds3b7ClmPv9urfd-g5hJgVreNExm5REs51W7sGPoYTjJdredCPAvgYWfJMb8TVCmhATbUX_WBUOw-7zTCpHqaPFuyY-X2s6oEJIEthzo_TRGoECng7xftci-ijE_7nH72qBqPr2JOmHgG5KoYMhAATQpTGozSnjAz7tAaqtYMfbB8Bpilh4VvFwqd3_NySGozwA_A2Vpw467B_a9uJF7sqpbmiRAC4rGpckrdYgcbx"
+                  class="place-card-image2"
+                />
+                <div class="place-card-container6">
+                  <span class="place-card-text5"><span>Supporting Survivors</span></span>
+                  <span class="place-card-text6">
+                    <span>
+                     Practical advice on how to support friends or family members experiencing GBV.
+                    </span>
+                  </span>
+                  <outline-button-wrapper-i1v5
+                    class="outline-button-wrapper-i1v5"
+                  >
+                    <!--OutlineButton component-->
+                    <div class="outline-button-container2">
+                      <button class="outline-button-button2 button Button" onclick="window.open('https://gbvguidelines.org/wp/wp-content/uploads/2018/03/GBV_PocketGuide021718.pdf', '_blank')">
+                        <span>Discover more</span>
+                      </button>
+                    </div>
+                  </outline-button-wrapper-i1v5>
+                </div>
+              </div>
+            </place-card-wrapper-icnl>
+          </div>
+        </div>
+        
+        <!-- Programs Section -->
+        <div id="programs-section" class="landing-page-main">
+          <h1>Programs</h1>
+          <span class="landing-page-text25">Recommended</span>
+          <div class="landing-page-cards-container">
+            <place-card-wrapper-2d1l class="place-card-wrapper-2d1l">
+              <!--PlaceCard component-->
+              <div class="place-card-container7">
+                <img
+                  alt="image"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgKZ9ZiiT5DSjn7phycUPO_3mlHJKaq3dgVi5a1DSgmDTT_ptXjEcOgVzzJKAYWuxopiVS4zUOYploFa0zaFiSfalkVrmh4dEEbzNnoaUhlzKNvKKsUELJk4bFZoFc78lfhXePRGl5xuDIVMyQqMCix3VxJb86TKPFBbfYFx9BaNXEWz3Op1j4yrUfkZ3Trp55tFLUEijDbFqeoqdK8dQmwjgNM017UAohpu9dfhDtzKkAet-0viyhT7An5hPcGa17oEobORtvjAyM"
+                  class="place-card-image3"
+                />
+                <div class="place-card-container8">
+                  <span class="place-card-text7"><span>Legal Aid Services</span></span>
+                  <span class="place-card-text8">
+                    <span>
+                      Access to legal support and guidance for those affected by GBV
+                    </span>
+                  </span>
+                  <outline-button-wrapper-m9j2
+                    class="outline-button-wrapper-m9j2"
+                  >
+                    <!--OutlineButton component-->
+                    <div class="outline-button-container3">
+                      <button class="outline-button-button3 button Button" onclick="window.open('https://findahelpline.com/countries/ke/topics/abuse-domestic-violence', '_blank')">
+                        <span>Discover More</span>
+                      </button>
+                    </div>
+                  </outline-button-wrapper-m9j2>
+                </div>
+              </div>
+            </place-card-wrapper-2d1l>
+            <place-card-wrapper-4bkc class="place-card-wrapper-4bkc">
+              <!--PlaceCard component-->
+              <div class="place-card-container9">
+                <img
+                  alt="image"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuATz5AoVISiUZn1uh_jL8S3eU6XMsOv0uZ6tPH0wl0QDWxgXDTdCr3kWViI-jeD5hCHp9WYaHAXDyXbt9XJ35XCz5ec6Dp1x33dFeRJ0rRHxczy0BNS5s5zF76t1xkeaxLc-OGqDj_OSuzHdbYzfHd79MP9ha8Ctf4rB0V4A4AKtSDvkCh6Rifi457fSxEEZHa2beudJuGCBqW6rumy4sg0kx1wy1XCexdRDuuMn5jJOBdqH1dU8gSW5ITBsh8TO3DdXCs1ke-SLQUs"
+                  class="place-card-image4"
+                />
+                <div class="place-card-container10">
+                  <span class="place-card-text9"><span>Safe Haven</span></span>
+                  <span class="place-card-text10">
+                    <span>
+                       Find safe and secure shelters for survivors of gender-based violence.
+                    </span>
+                  </span>
+                  <outline-button-wrapper-w1ya
+                    class="outline-button-wrapper-w1ya"
+                  >
+                    <!--OutlineButton component-->
+                    <div class="outline-button-container4">
+                      <button class="outline-button-button4 button Button" onclick="window.open('https://www.enableme.ke/en/article/gender-based-violence-rescue-centres-in-kenya-9338', '_blank')">
+                        <span>Discover more</span>
+                      </button>
+                    </div>
+                  </outline-button-wrapper-w1ya>
+                </div>
+              </div>
+            </place-card-wrapper-4bkc>
+            <place-card-wrapper-mrra class="place-card-wrapper-mrra">
+              <!--PlaceCard component-->
+              <div class="place-card-container11">
+                <img
+                  alt="image"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGThGM4HNLmIQji4zWE04HdyA5fB4t4cC0XKi00F5XXF4kWNVn2Wyi4A792VG-fEnQ8mVggqoTsVgX6-cRDRZp0W9z3q06-7qB2avhzLPD43O9ktHPrwFWHvSyak30CApnj29t4mhvwN1wMjnKSSuU4Lrx5gKcaQn3QX5cNQx6XwT13bUmIydgL6S0qXioo7bBG6Et9ev3xFBcI7UF-BRUN0fdmzWxyt4VklhYAbB7E7i9gxlwYWkRDiH2K2BmVT3Q0_DABOraW3l1"
+                  class="place-card-image5"
+                />
+                <div class="place-card-container12">
+                  <span class="place-card-text11"><span>Girls Empowerment</span></span>
+                  <span class="place-card-text12">
+                    <span>
+                      Empowering our Girls for a better future. This is only possible through donation.
+                    </span>
+                  </span>
+                  <outline-button-wrapper-3tpk
+                    class="outline-button-wrapper-3tpk"
+                  >
+                    <!--OutlineButton component-->
+                    <div class="outline-button-container5">
+                      <button class="outline-button-button5 button Button" onclick="window.location.href='{{ url_for('donation_page') }}'">
+                        <span>Donate here</span>
+                      </button>
+                    </div>
+                  </outline-button-wrapper-3tpk>
+                </div>
+              </div>
+            </place-card-wrapper-mrra>
+          </div>
+        </div>
+    </div>
+    
+    <!-- Additional Articles Section 1 -->
+    <div id="additional-section-1" class="landing-page-main">
+      <h1>Resources and Support</h1>
+      <span class="landing-page-text25">Essential Information</span>
+      <div class="landing-page-cards-container">
+        <place-card-wrapper class="place-card-wrapper" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+          <!--PlaceCard component-->
+          <div class="place-card-container1">
+            <img
+              alt="Legal Rights and Protection"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTsDRKP9pFwQGIusegeglq1-cqG2-65RxO8UhVyE0WALMPpoMiPKrp_XQn8q381VO7WkwG24uyu6GcYHF1y0HoOzgVQPlXlsaFXCPP90LougtTrbY5XKvtvwF0NdTz7kvQZyFhsratfn7p-sGmQecu88ROzK6oQCcgZSpimqnGaBW5Ipb5fN3Ftm4xldE873aypNkMuUDHIsqYhYzF6Qom0SN8U4L2Dma4Q7NGWc3wYwvvIF3lhpuq8MgVoR8HkodZmDGpFkBuGb6W"
+              class="place-card-image"
+            />
+            <div class="place-card-container2">
+              <span class="place-card-text1"><span>Recognizing Signs of Abuse</span></span>
+              <span class="place-card-text2">
+                <span>
+                  Learn how to identify different forms of abuse and their warning signs.
+                </span>
+              </span>
+              <outline-button-wrapper class="outline-button-wrapper">
+                <!--OutlineButton component-->
+                <div class="outline-button-container">
+                  <button class="outline-button-button button Button" onclick="window.open('https://covaw.or.ke/telling-signs-of-abuse/', '_blank')">
+                    <span>Learn More</span>
+                  </button>
+                </div>
+              </outline-button-wrapper>
+            </div>
+          </div>
+        </place-card-wrapper>
+        <place-card-wrapper-s9px class="place-card-wrapper-s9px" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+          <!--PlaceCard component-->
+          <div class="place-card-container3">
+            <img
+              alt="Financial Independence Programs"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9G2h2cMaFHucx-fRpCT5rMIOkL9ZOV4AUy4HlAqTEtK4DzN-bgXXrV-I6jp6wmW3h2aGXtO3yAGp53zim_LohF6XXaZSbne4CNOBV0BsUU4gpNa0DUBea4UnrZ14h8nBjbWPf66_DYWhXbagDQSb_Z_K8Jc3GN3IySSzGnPy9GecDtBAKFcwZ8M4zc57PJ_4XBc8Lv6oOgc0tXeONuiX2D2_lhoCrMjnSLlWbd5onJoLqFDp5BdPV0HajTrwiAgJUImG9ny4fzHrd"
+              class="place-card-image1"
+            />
+            <div class="place-card-container4">
+              <span class="place-card-text3"><span>Creating a safety plan</span></span>
+              <span class="place-card-text4">
+                <span>
+                 Steps to take to ensure your safety and the safety of others.
+                </span>
+              </span>
+              <outline-button-wrapper-fgfa class="outline-button-wrapper-fgfa">
+                <!--OutlineButton component-->
+                <div class="outline-button-container1">
+                  <button class="outline-button-button1 button Button" onclick="window.open('https://www.unwomen.org/en/articles/explainer/take-action-10-ways-you-can-help-end-violence-against-women', '_blank')">
+                    <span>Discover More</span>
+                  </button>
+                </div>
+              </outline-button-wrapper-fgfa>
+            </div>
+          </div>
+        </place-card-wrapper-s9px>
+        <place-card-wrapper-icnl class="place-card-wrapper-icnl" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
+          <!--PlaceCard component-->
+          <div class="place-card-container5">
+            <img
+              alt="Counseling Services"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuASNS51eSDQK7QzSMeAfHxWGZkaG7z9hHOarJfan47TjU_v9QtjpBQ_zkKETuCQP9N4dN5li0TYNO3McbgbCQgjvk9dh6vrGU4bh60cQQ3ktYZ_zn63YV7jZM8_ia0hlS0TSb6CfzN3VTE7RC4_tCuolAzCdfFPn3v4ew7B0LC7b-nHof4Q-Csub5YPQI-qcdfV8r5Qi9zIaJkBYMf_PsnwE9qRXC7TEeE3YDMi6pBUFMI8uNdkC9qLGkeFUqoAZHYxtxfVMiSfP7fl"
+              class="place-card-image2"
+            />
+            <div class="place-card-container6">
+              <span class="place-card-text5"><span>Seeking Professional Help</span></span>
+              <span class="place-card-text6">
+                <span>
+                Information on where to find professional help and support services.
+                </span>
+              </span>
+              <outline-button-wrapper-i1v5 class="outline-button-wrapper-i1v5">
+                <!--OutlineButton component-->
+                <div class="outline-button-container2">
+                  <button class="outline-button-button2 button Button" onclick="window.open('https://hakgbv1195.org/', '_blank')">
+                    <span>Get Support</span>
+                  </button>
+                </div>
+              </outline-button-wrapper-i1v5>
+            </div>
+          </div>
+        </place-card-wrapper-icnl>
+      </div>
+    </div>
+    
+    <!-- Additional Articles Section 2 -->
+    <div id="additional-section-2" class="landing-page-main">
+      <h1 data-aos="fade-up" data-aos-duration="800">Community Programs</h1>
+      <span class="landing-page-text25" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">Get Involved</span>
+      <div class="landing-page-cards-container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+        <place-card-wrapper class="place-card-wrapper" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+          <!--PlaceCard component-->
+          <div class="place-card-container1">
+            <img
+              alt="Volunteer Opportunities"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfqxh7GbCteuj0Ok_k4kJ4llT5tj-xs4mkvxWSsVGfJEuyTZiwKfPYLZ_2WtWzDs0fNJGJRkVeC90fcmnNpqu_OEcPBStGPp3rtOClk68T5D1eFmv5hU0y3uVAyfjgk3Yx3tRYMGK8Ckm_GWSgEuFJlW0q1zLq86xfZYvnF45PbKrz2SAdqU07ooaVS8LLG4F-GasZt992hR7tucvYvveemU2e0mGTDqIFWz2mvHQRI7kNDoUXTujpro3Rb0WTNukVIzaYW-HDguMv"
+              class="place-card-image"
+            />
+            <div class="place-card-container2">
+              <span class="place-card-text1"><span>Community Awareness Walk</span></span>
+              <span class="place-card-text2">
+                <span>
+                  Find walks to raise awareness about gender-based violence in our community.
+                </span>
+              </span>
+              <outline-button-wrapper class="outline-button-wrapper">
+                <!--OutlineButton component-->
+                <div class="outline-button-container">
+                  <button class="outline-button-button button Button" onclick="window.open('https://covaw.or.ke/', '_blank')">
+                    <span>Discover more</span>
+                  </button>
+                </div>
+              </outline-button-wrapper>
+            </div>
+          </div>
+        </place-card-wrapper>
+        <place-card-wrapper-s9px class="place-card-wrapper-s9px">
+          <!--PlaceCard component-->
+          <div class="place-card-container3">
+            <img
+              alt="Awareness Campaigns"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpfopSnNvOtXnUz0Fvmat9j8ggc2SReTkKGc6bB9gY_U3h4dpeYmFpcA8aPMk3kamRPQ0xHjckC7r_Nrz35bSl1W9AFDLoNg3BUDlla4voCFfJgX0J3tMuPg5-vQZicCdun-OfE3bWpkeWz88u1959jL6FZ5gv36mv0t3CFnHFkwhkMvTM1lpjO8saDhJJ5jSAc6eqwR3uI1Bbybco0JmnzXLXNTiWvWoNf6VFw2gzbUfXUmuF0FW62u7qfjQpnDv2eVefLip3OkxM"
+              class="place-card-image1"
+            />
+            <div class="place-card-container4">
+              <span class="place-card-text3"><span>Fundraising</span></span>
+              <span class="place-card-text4">
+                <span>
+                Fundraising to support programs through donations.
+                </span>
+              </span>
+              <outline-button-wrapper-fgfa class="outline-button-wrapper-fgfa">
+                <!--OutlineButton component-->
+                <div class="outline-button-container1">
+                  <button class="outline-button-button1 button Button" onclick="window.location.href='Donation2.html'">
+                    <span>Get Involved</span>
+                  </button>
+                </div>
+              </outline-button-wrapper-fgfa>
+            </div>
+          </div>
+        </place-card-wrapper-s9px>
+        <place-card-wrapper-icnl class="place-card-wrapper-icnl">
+          <!--PlaceCard component-->
+          <div class="place-card-container5">
+            <img
+              alt="Educational Workshops"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCY6cfLfPplTY93W_RjrO1HZgOPZloxh5Y_zHopUQUqewt-nTFgz_5RIAJp-86RC3KGGp-XdqP0mmRsmipNDm5qSoJr2vafh61fhGHAVRSdLGqZso73TK2QC4dRXeKkXzAIADCVPx7GbN-gFY1i1xvajR071Mv7A6oDmyA8LF9IfcF9QHnqDpzjbbz3EBNR_-ecCUhAfpBVkZjoE3bKXa_6nSFHw7kub38_kQzvR9M85aZxnl1cvkpbZPLCZVMy0wS9Lvd-71Hba-Sm"
+              class="place-card-image2"
+            />
+            <div class="place-card-container6">
+              <span class="place-card-text5"><span>Educational Workshops</span></span>
+              <span class="place-card-text6">
+                <span>
+                 Attend workshops on prevention, awareness, and community building.
+                </span>
+              </span>
+              <outline-button-wrapper-i1v5 class="outline-button-wrapper-i1v5">
+                <!--OutlineButton component-->
+                <div class="outline-button-container2">
+                  <button class="outline-button-button2 button Button" onclick="window.open('https://gvrc.or.ke/', '_blank')">
+                    <span>Learn More</span>
+                  </button>
+                </div>
+              </outline-button-wrapper-i1v5>
+            </div>
+          </div>
+        </place-card-wrapper-icnl>
+      </div>
+    </div>
+    
+    <!-- Zinduka Footer -->
+    <footer class="site-footer">
+      <div class="footer-container">
+        <!-- About -->
+        <div class="footer-col">
+          <div class="footer-logo">
+            <img src="{{ url_for('static', filename='images/result.png') }}" alt="Zinduka Logo" style="width: 120px; margin-bottom: 10px;">
+            <h4>ZINDUKA</h4>  
+          </div>
+          <p>
+            Zinduka is a safe space for survivors of gender-based violence in Kenya.
+            We amplify voices, provide support, and work to end violence against women and girls.
+          </p>
+          <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
+          <p><i class="fas fa-envelope"></i> support@zinduka.org</p>
+        </div>
+
+        <!-- News -->
+        <div class="footer-col">
+          <h3>From News</h3>
+          <ul>
+            <li><a href="#">Kenya's Movement to End GBV</a></li>
+            <li><a href="#">Zinduka Podcast on Healing</a></li>
+            <li><a href="#">Digital Tools for Safety</a></li>
+            <li><a href="#">Our Stories in the Press</a></li>
+          </ul>
+        </div>
+
+        <!-- Programs -->
+        <div class="footer-col">
+          <h3>Our Programs</h3>
+          <ul>
+            <li><a href="#">Safe Spaces</a></li>
+            <li><a href="#">Healing Circles</a></li>
+            <li><a href="#">Emergency Relocation</a></li>
+            <li><a href="#">Legal Aid & Counseling</a></li>
+          </ul>
+        </div>
+
+        <!-- Emergency Contact -->
+        <div class="footer-col">
+          <h3>Emergency Help 📞</h3>
+          <p><strong>Tap to call:</strong></p>
+          <ul class="emergency-links">
+            <li><a href="tel:116">📞 116 – Childline Kenya (Free)</a></li>
+            <li><a href="tel:1195">📞 1195 – GBV Helpline</a></li>
+            <li><a href="tel:999">📞 999 – Police Emergency</a></li>
+            <li><a href="tel:+254800721186">📞 +254 800 721 186 – Healthcare Assistance Kenya (HAK)</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p><strong>Disclaimer:</strong> Stories shared on this platform are personal experiences and do not replace professional advice. For emergencies, contact the listed hotlines immediately.</p>
+      </div>
+    </footer>
+
+    <!--script code-->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  <!-- Mobile Menu Toggle Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const hamburger = document.getElementById('hamburger');
+      const navLinks = document.getElementById('nav-links');
+      
+      hamburger.addEventListener('click', function() {
+        // Toggle the active class on hamburger for animation
+        hamburger.classList.toggle('active');
+        
+        // Toggle the active class on nav-links to show/hide menu
+        navLinks.classList.toggle('active');
+      });
+      
+      // Close menu when clicking on a nav link (optional)
+      const navItems = navLinks.querySelectorAll('a');
+      navItems.forEach(item => {
+        item.addEventListener('click', function() {
+          hamburger.classList.remove('active');
+          navLinks.classList.remove('active');
+        });
+      });
+      
+      // Close menu when clicking outside (optional)
+      document.addEventListener('click', function(event) {
+        const isClickInsideNav = navLinks.contains(event.target);
+        const isClickOnHamburger = hamburger.contains(event.target);
+        
+        if (!isClickInsideNav && !isClickOnHamburger && navLinks.classList.contains('active')) {
+          hamburger.classList.remove('active');
+          navLinks.classList.remove('active');
+        }
+      });
+    });
+  </script>
+    
+  </body>
+</html>
